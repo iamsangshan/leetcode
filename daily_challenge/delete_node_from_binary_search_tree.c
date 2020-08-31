@@ -71,7 +71,7 @@ struct TreeNode* deleteNode(struct TreeNode* root, int key){
         succ = findminnode(curr->right);
         curr->val = succ->val;
         deleteNode(curr, succ->val);
-    } else if (curr->right || curr->right) {
+    } else if (curr->right || curr->left) {
         /* 1 child. attach it to the child's grandparent and free the node */
         if (curr->right) 
             succ = curr->right;
